@@ -148,6 +148,8 @@ section{
 
 }
 
+
+
 .mailto{
    position: relative;
    left: 65%;
@@ -166,6 +168,19 @@ section{
 
 .mailto:hover{
     transform: scale(1.05);
+}
+
+#github{
+    position: relative;
+    left: 40%;
+    top: 60%;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 15px 0px 0px 15px;
+    width: 15%;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+    background-color: #395BC7;
 }
 
 
