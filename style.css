@@ -24,7 +24,7 @@ html, body {
     display: flex;
     justify-content: center;
     gap: 10px;
-    padding: 10px;
+    padding: 10px 15px 10px 15px;
     color: #D0DFFF;
     background-color: #8B8D98 ; /*#787A84*/
     border-radius: 25px 25px 25px 25px;
@@ -44,6 +44,7 @@ html, body {
 .header a:hover{
     /* text-decoration: underline blue; */
     color: #395BC7;
+    cursor: pointer;
 }
 
 section{
@@ -115,6 +116,7 @@ section{
     justify-content: center;
     align-items: center;
     gap: 10px;
+    padding: 20px;
     margin-top: -70px;
     /* border: 2px red solid; */
 
@@ -131,6 +133,7 @@ section{
 .about-img img {
     height: 600px;
     width: 400px;
+    margin-top: -80px;
     /* border: 2px red solid; */
 
 }
@@ -148,6 +151,37 @@ section{
 
 }
 
+/* .social{
+    display: none;
+} */
+
+/*
+ .contact{
+    display: block;
+    flex-direction: row;
+    align-items: center;
+}
+*/
+.social{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    margin: 20px;
+     margin-top: -115px;
+     margin-left: -380px; ;
+}
+
+#linkedin img{
+    height: auto;
+    width: 80px;
+}
+
+.social #github img{
+    height: auto;
+    width: 70px;
+}
 
 
 .mailto{
@@ -168,19 +202,7 @@ section{
 
 .mailto:hover{
     transform: scale(1.05);
-}
-
-#github{
-    position: relative;
-    left: 40%;
-    top: 60%;
-    padding: 20px;
-    margin: 20px;
-    border-radius: 15px 0px 0px 15px;
-    width: 15%;
-    height: auto;
-    transition: transform 0.3s ease-in-out;
-    background-color: #395BC7;
+    cursor: pointer;
 }
 
 
@@ -356,9 +378,12 @@ section{
     transform: scale(1.05);
 } */
 
+
+
 #project{
     /*width: 100vw;
     height: 100vh;*/
+    padding-bottom: 80px;
     background-color: var(--bg-color);
 
 
@@ -446,11 +471,7 @@ section{
     width: auto;
     height: 30px;
 }
-/*
-.tech-icon img{
-    width: 20px;
-    height: 20px;
-}*/
+
 
 
 
