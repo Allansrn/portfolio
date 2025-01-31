@@ -146,22 +146,11 @@ section{
     font-family: monospace;
     font-size: 2em;  
     width: 40%;
-    /* border: 2px red solid; */
 
 
 }
 
-/* .social{
-    display: none;
-} */
 
-/*
- .contact{
-    display: block;
-    flex-direction: row;
-    align-items: center;
-}
-*/
 .social{
     display: flex;
     justify-content: center;
@@ -221,7 +210,6 @@ section{
     font-style: oblique;
     font-size: 3rem;
     width: auto;
-    /* border: 2px red solid; */
 }
 
 .competence{
