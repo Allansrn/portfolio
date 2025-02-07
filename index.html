@@ -14,11 +14,12 @@
 </head>
 <body>
     <main>
-        <div class="header">
+        <div class="navbar">
             <a href="#Home">Accueil</a>
             <a href="#About">A<span id="me">propos</span></a>
             <a href="#project">Projets</a>
-            <a href="#Skills">Compétence</a>
+            <a href="#Skills">Compétences</a>
+            <!-- <a href="#veille-tech">Veille technologique</a> -->
         </div>
         <section id = "Home">
             <div class="home">
@@ -43,7 +44,7 @@
                 <div class="text-about">
                     <div class="name">
                         <p>
-                            Bonjour, je suis <spa id="mq">Allan Roussillon</spa>; 
+                            Bonjour, je suis <spa id="mq">Allan Roussillon</spa>
                         </p>
                     </div>
                     <p>
@@ -71,48 +72,6 @@
                     </div>
                 </div>
             </div>
-        </section>
-        <section id = "Skills">
-            <h1>
-                Compétence
-            </h1>
-            
-            <div class="competence">
-                <div class="csharp">
-                    <img src="images/LogoCsharp.svg" alt="logo Csharp">
-                    <!-- <h3>
-                        Csharp
-                    </h3> -->
-                </div>
-                <div class="html">
-                    <img src="images/html.svg" alt="">
-                    <!-- <h3>
-                        Html
-                    </h3> -->
-                </div>
-                <div class="css">
-                    <img src="images/css.svg" alt="">
-                    <!-- <h3>
-                        Css
-                    </h3> -->
-                </div>
-                <div class="python">
-                    <img src="images/python.svg" alt="">
-                    <!-- <h3>
-                        Python
-                    </h3> -->
-                </div>
-                <div class="mysql">
-                    <img src="images/mysql.svg" alt="">
-                    
-                </div>
-                <!-- <div class="java">
-                    <img src="images/java.png" alt="">
-                </div>
-                <div class="javascript">
-                    <img src="images/javascript.png" alt="">
-                </div> -->
-            </div> 
         </section>
         <section id = "project">
             <h1>Projets</h1>
@@ -150,7 +109,7 @@
                         </div>
                     </div>
                     <div class="card">
-                        <img src="images/Guessthenumberlogo.png" alt="Image 3">
+                        <img src="images/guessthenumberimage.png" alt="Image 3">
                         <div class="card-content">
                             <h2 class="card-title">Guess the number</h2>
                             <p class="card-description">Guess the Number est un jeu web en HTML, CSS et JavaScript où le joueur devine un nombre mystère à l’aide d’indices interactifs."</p>
@@ -191,8 +150,66 @@
                 </div>
             </div>
         </section>
-        <section>
-
+        <section id = "Skills">
+            <h1>
+                Compétences
+            </h1>
+            <div class="competence">
+                <div class="grid-icon">
+                    <div class="card-icon">
+                        <img src="images/html.svg" alt="html">
+                    </div>
+                    <div class="card-icon">
+                        <img src="images/css.svg" alt="css">
+                    </div>
+                    <div class="card-icon">
+                        <img src="images/javascript.svg" alt="js">
+                    </div>
+                    <div class="card-icon">
+                        <img src="images/logoCsharp.svg" alt="csharp">
+                    </div>
+                    <div class="card-icon">
+                        <img src="images/java.svg" alt="java"> <!--Mettre un icon java svg-->
+                    </div>
+                    <div class="card-icon">
+                        <img src="images/python.svg" alt="python">
+                    </div>
+                    <div class="card-icon">
+                        <img src="images/php.svg" alt="">
+                    </div>
+                    <div class="card-icon">
+                        <img src="images/mysql.svg" alt="">
+                    </div>
+                    <div class="card-icon">
+                        <img src="images/react.svg" alt="">
+                    </div>
+                </div>
+                <!-- <div class="circle"></div> -->
+                <div class="certification">
+                    <div class="titre-certif">
+                        <h2>Certification</h2>
+                        <div class="autorotate">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.745 3.745 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 0 1 1.043-3.296 3.746 3.746 0 0 1 3.296-1.043A3.746 3.746 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.296A3.745 3.745 0 0 1 21 12Z" />
+                            </svg> 
+                        </div>  
+                    </div>
+                    <div class="list-certification">
+                        <ul>
+                            <li>HTML/CSS - Openclassroom</li>
+                            <li>Boostez votre productivité avec ChatGPT - Openclassroom</li>
+                            <li>Python - Netcade</li>
+                            <li>Javascript - Openclassroom</li>
+                        </ul>
+                        <div class="icon-certification">
+                            <img src="images/certificat.png" alt="">   
+                        </div>                  
+                    </div>
+                </div>
+            </div> 
+        </section>
+        <section id="veille-tech">
+            <h1>Veille technologique</h1>
         </section>
         <script src="script.js"></script>
     </main>
