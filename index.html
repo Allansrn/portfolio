@@ -14,13 +14,51 @@
 </head>
 <body>
     <main>
-        <div class="navbar">
-            <a href="#Home">Accueil</a>
-            <a href="#About">A<span id="me">propos</span></a>
-            <a href="#project">Projets</a>
-            <a href="#Skills">Compétences</a>
-            <!-- <a href="#veille-tech">Veille technologique</a> -->
-        </div>
+        <div class="navigation">
+            <ul>
+                <li class="list active">
+                    <a href="#Home">
+                        <span class="icon">
+                            <ion-icon name="home-outline"></ion-icon>
+                        </span>
+                        <span class="text">Home</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="#About">
+                        <span class="icon">
+                            <ion-icon name="person-outline"></ion-icon>
+                        </span>
+                        <span class="text">Profile</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="#project">
+                        <span class="icon">
+                            <ion-icon name="code-slash-outline"></ion-icon>                        
+                        </span>
+                        <span class="text">Projets</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="#Skills">
+                        <span class="icon">
+                            <ion-icon name="school-outline"></ion-icon>                        
+                        </span>
+                        <span class="text">Compétences</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="#veille-tech">
+                        <span class="icon">
+                            <ion-icon name="newspaper-outline"></ion-icon>
+                        </span>
+                        <span class="text">Veille</span>
+                    </a>
+                </li>
+                <div class="indicator"></div>
+            </ul>
+        </div>               
         <section id = "Home">
             <div class="home">
                 <div class="presentation">
@@ -61,10 +99,10 @@
                             </a>  
                         </div>
                         <div class="social">
-                            <a href="https://www.linkedin.com/in/allan-roussillon-3ab33a2a2/" target="_blank" id="linkedin">
+                            <a href="https://www.linkedin.com/in/allan-roussillon-3ab33a2a2/" target="_blank" rel="noopener noreferrer" id="linkedin">
                                 <img src="images/linkedin.svg" alt="linkedin">
                             </a>
-                            <a href="https://github.com/Allansrn" target="_blank" id="github">
+                            <a href="https://github.com/Allansrn" target="_blank" rel="noopener noreferrer" id="github">
                                 <img src="images/github-mark.svg" alt="github">
                             </a>
 
@@ -83,7 +121,7 @@
                             <h2 class="card-title">CrystalCarWash</h2>
                             <p class="card-description">Site vitrine en MVC pour CrystalCarWash présentant leurs services de lavage auto et leur gamme de produits d'entretien automobile.</p>
                             <div class="card-technologies" style="justify-content: space-between;">
-                                <button class="card-button"><a href="https://github.com/Allansrn/CrystalCarWash" target="_blank"></a>En savoir plus</a></button>
+                                <button class="card-button"><a href="https://github.com/Allansrn/CrystalCarWash" target="_blank" rel="noopener noreferrer"></a>En savoir plus</a></button>
                                 <div style="display: flex; gap: 10px;">
                                     <img src="images/html.svg" alt="HTML" class="tech-icon">
                                     <img src="images/css.svg" alt="CSS" class="tech-icon">
@@ -100,7 +138,7 @@
                             <h2 class="card-title">jardins-st-eloi</h2>
                             <p class="card-description">Site web collaboratif présentant la boutique Jardin de St-Eloi, un fleuriste spécialisé dans la composition et la vente de bouquets.</p>
                             <div class="card-technologies" style="justify-content: space-between;">
-                                <button class="card-button"><a href="https://siotyron.github.io/projet-saint-eloi/" target="_blank">En savoir plus</a></button>
+                                <button class="card-button"><a href="https://siotyron.github.io/projet-saint-eloi/" target="_blank" rel="noopener noreferrer">En savoir plus</a></button>
                                 <div style="display: flex; gap: 10px;">
                                     <img src="images/html.svg" alt="HTML" class="tech-icon">
                                     <img src="images/css.svg" alt="CSS" class="tech-icon">
@@ -114,7 +152,7 @@
                             <h2 class="card-title">Guess the number</h2>
                             <p class="card-description">Guess the Number est un jeu web en HTML, CSS et JavaScript où le joueur devine un nombre mystère à l’aide d’indices interactifs."</p>
                             <div class="card-technologies" style="justify-content: space-between;">
-                                <button class="card-button"><a href="https://allansrn.github.io/guessthenumber/" target="_blank">En savoir plus</a></button>
+                                <button class="card-button"><a href="https://allansrn.github.io/guessthenumber/" target="_blank" rel="noopener noreferrer">En savoir plus</a></button>
                                 <div style="display: flex; gap: 10px; margin-bottom: -20px;">
                                     <img src="images/html.svg" alt="HTML" class="tech-icon">
                                     <img src="images/css.svg" alt="CSS" class="tech-icon">
@@ -212,6 +250,18 @@
             <h1>Veille technologique</h1>
         </section>
         <script src="script.js"></script>
+        <script>
+            // const list = document.querySelectorAll('.list');
+            // function activeLink(){
+            //     list.forEach((item) =>
+            //     item.classList.remove('active'));
+            //     this.classList.add('active');  
+            // }
+            // list.forEach((item) =>
+            // item.addEventListener('click', activeLink))
+        </script>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     </main>
 </body>
 </html>
