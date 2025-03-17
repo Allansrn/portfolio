@@ -334,7 +334,7 @@ section{
 .card:hover {
     transform: translateY(-10px);
 }
-#miniature {
+.card #miniature {
     width: 100%;
     height: 200px;
     object-fit: cover;
@@ -515,54 +515,68 @@ section{
     height: 100vh;
     width: 100vw;
     /* background: linear-gradient(to right,#F2C94C, var(--accent));     */
-    margin-top: 50px;
-    
+    /* margin-top: 50px;
+    margin-bottom: 55px;   */
 }
 
 #veille-tech h1{
     display:flex;
-    justify-content: center;
-    padding: 80px 50px 25px 50px;
+    justify-content: flex-start;
+    padding: 40px 40px 25px 50px;
     font-family: monospace;
     font-style: oblique;
     font-size: 3rem;
     width: auto;
 }
 
-.source-veille{
+.veille-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.veille-container hr{
+    width: 80%;
+    border: 1px solid #555;
+}
+
+.veille-card{
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
     gap: 20px;
-    justify-content: center;
-    align-items: center;
-    margin: 50px;
+    width: 80%;
+    cursor: pointer;
 }
 
-.source{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-/* From Uiverse.io by PriyanshuGupta28 */ 
-    width: 300px;
-    height: 300px;
-    border-radius: 1rem;
-    background-color: var(--accent);
-    background-image: linear-gradient(43deg, var(--accent) 0%, #C850C0 46%, #F2C94C 100%);
-    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
-    transition: transform 0.3s ease-in-out;
+.veille-card a {
+    text-decoration: none;
 }
 
-.source img{
-    height: 150px;
-    width: 150px;
+.veille-img img{
+    height: 200px;
+    width: 200px;
+    border-radius: 25px;
 }
 
-.source ion-icon{
-    height: 150px;
-    width: 150px;
+/* .veille-content{
+    min-width: 300px;
+    flex-grow: 1;
+
+} */
+
+.veille-content h2{
+    font-family: monospace;
+    font-size: 2em;
     color: var(--crl);
 }
 
-.source:hover{
-    transform: scale(1.05);
+.veille-content p{
+    font-family: monospace;
+    font-size: 1.5em;
+    color: #555;
 }
