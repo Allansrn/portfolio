@@ -176,7 +176,32 @@ section{
     z-index: 2; 
 }
 
+.typing {
+    position: relative;
+    color: var(--accent);
+    font-family: monospace;
+    font-style: italic;
+    font-weight: bold;
+}
 
+.typing::after {
+    content: "";
+    position: absolute;
+    right: -5px;
+    width: 1px;
+    height: 100%;
+    border-right: 2px solid #4F46E5;
+    animation: blink 0.8s infinite ease;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
 
 #mq{
     color: var(--accent) ;
@@ -239,7 +264,7 @@ section{
     color: var(--crl);
     font-family: monospace;
     font-size: 2em;  
-    width: 40%;
+    width: 50%;
 
 }
 
@@ -250,20 +275,48 @@ section{
     gap: 20px;
     padding: 20px;
     margin: 20px;
-     margin-top: -115px;
-     margin-left: -380px; ;
+    margin-top: -115px;
+    margin-left: -380px;
+    /* animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out; */
+    /* margin-left: 30px;
+    margin-top: 5px; */
 }
+
+
 
 #linkedin img{
     height: auto;
     width: 80px;
+    animation-name: floating-linkedin;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes floating-linkedin {
+    from { transform: translate(0,  0px); }
+    65%  { transform: translate(0, 10px); }
+    to   { transform: translate(0, -0px); }    
 }
 
 .social #github img{
     height: auto;
     width: 70px;
+    animation-name: floating-github;
+    animation-delay: 1s;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
 }
 
+@keyframes floating-github {
+    from { transform: translate(0,  0px); }
+    65%  { transform: translate(0, 10px); }
+    to   { transform: translate(0, -0px); }    
+}
 
 .mailto{
    position: relative;
@@ -580,3 +633,5 @@ section{
     font-size: 1.5em;
     color: #555;
 }
+
+
