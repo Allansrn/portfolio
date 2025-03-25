@@ -48,3 +48,27 @@ function erase() {
 document.addEventListener("DOMContentLoaded", function() {
     setTimeout(type, newTextDelay + 250);
 });
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    console.log("Script chargé");
+    const toggleSwitch = document.getElementById("dark-mode-toggle");
+    const body = document.body;
+
+    if (localStorage.getItem("dark-mode") === "enabled") {
+        body.classList.add("dark-mode");
+        toggleSwitch.checked = true;
+    }
+
+    toggleSwitch.addEventListener("change", () => {
+        if (toggleSwitch.checked) {
+            console.log("Mode sombre activé");
+            body.classList.add("dark-mode");
+            localStorage.setItem("dark-mode", "enabled");
+        } else {
+            console.log("Mode sombre désactivé");
+            body.classList.remove("dark-mode");
+            localStorage.setItem("dark-mode", "disabled");
+        }
+    });
+});

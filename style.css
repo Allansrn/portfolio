@@ -5,20 +5,37 @@
     box-sizing: border-box;
 }
 
-:root{
-    --bg-color : #F9F9FB ;
-    --crl : #222327;
-    --accent : #395BC7 ;
+:root {
+    --bg-color: #F9F9FB;
+    --crl: #222327;
+    --accent: #395BC7;
+    --light: #d8dbe0;
+    --dark: #28292c;
 }
 
-html, body {
+.dark-mode {
+    --bg-color: #18191A;
+    --crl: #E4E6EB;
+    --accent: #4C6EF5;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--crl);
+    transition: background-color 0.3s, color 0.3s;
     height: 100%; 
     margin: 0;
     padding: 0;
-    background-color: var(--bg-color);
+    overflow-x: hidden;
+}
+
+/* html, body {
+    height: 100%; 
+    margin: 0;
+    padding: 0;
     overflow-x: hidden;
 
-}
+} */
 
 .navigation {
     position: fixed;
@@ -157,9 +174,67 @@ section{
 
 
 #Home{
+    position: relative;
     width: 100vw;
     height: 100vh;
     background-color: var(--bg-color);
+}
+
+.toggle-switch {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    width: 100px;
+    height: 50px;
+    z-index: 5;
+    /* background-color: red; */
+    /* display: none; */
+}
+
+.switch-label {
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    background-color: var(--dark);
+    border-radius: 25px;
+    cursor: pointer;
+    border: 3px solid var(--dark);
+}
+
+.checkbox {
+    position: absolute;
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    transition: 0.3s;
+}
+
+.checkbox:checked ~ .slider {
+    background-color: var(--light);
+}
+
+.slider::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    box-shadow: inset 12px -4px 0px 0px var(--light);
+    background-color: var(--dark);
+    transition: 0.3s;
+}
+
+.checkbox:checked ~ .slider::before {
+    transform: translateX(50px);
+    background-color: var(--dark);
+    box-shadow: none;
 }
 
 .home {
@@ -174,6 +249,7 @@ section{
     font-size: 6em;
     text-align: center;
     z-index: 2; 
+    /* background-color: red; */
 }
 
 .typing {
@@ -287,7 +363,7 @@ section{
 
 
 
-#linkedin img{
+.social #linkedin img{
     height: auto;
     width: 80px;
     animation-name: floating-linkedin;
@@ -313,6 +389,22 @@ section{
 }
 
 @keyframes floating-github {
+    from { transform: translate(0,  0px); }
+    65%  { transform: translate(0, 10px); }
+    to   { transform: translate(0, -0px); }    
+}
+
+.social #cv img{
+    height: auto;
+    width: 70px;
+    animation-name: floating-cv;
+    animation-delay: 2s;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes floating-cv {
     from { transform: translate(0,  0px); }
     65%  { transform: translate(0, 10px); }
     to   { transform: translate(0, -0px); }    
@@ -376,12 +468,13 @@ section{
     
 }
 .card {
-    background-color: #fff;
+    background-color: var(--bg-color);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     transition: transform 0.3s;
-    border: 5px solid #fff;
+    border: 5px solid var(--bg-color);
     border-radius: 35px;
+    color: var(--crl);
     /* padding: 10px;   */
 }
 .card:hover {
@@ -404,7 +497,7 @@ section{
 }
 .card-description {
     font-size: 1em;
-    color: #555;
+    color: var(--crl);
     margin-bottom: 20px;
 }
 .card-button {
@@ -472,7 +565,7 @@ section{
     width: 50%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    background-color: #fff; /*Fond uniforme au site ou fond blanc*/
+    background-color: var(--bg-color); /*Fond uniforme au site ou fond blanc*/
     border-radius: 25px;
 }
 
@@ -500,9 +593,10 @@ section{
 .certification {
     width: 50%;
     padding: 20px;
-    background-color: white;
+    background-color: var(--bg-color);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 25px;
+    color: var(--crl);
 }
 
 .certification h2 {
@@ -511,7 +605,7 @@ section{
     font-size: 3.5em;
     padding: 20px;
     /* padding-left: 20px; */
-    color: #333;
+    color: var(--crl);
 }
 
 .titre-certif{
@@ -526,7 +620,7 @@ section{
     width: 150px;
     position: relative;
     bottom: 90px;
-    background-color: white;
+    background-color: var(--bg-color);
     border-radius: 50%;
     animation: autoRotateAnimation;
     animation-timeline: view();
@@ -593,7 +687,7 @@ section{
 
 .veille-container hr{
     width: 80%;
-    border: 1px solid #555;
+    border: 1px solid var(--crl);
 }
 
 .veille-card{
@@ -631,7 +725,7 @@ section{
 .veille-content p{
     font-family: monospace;
     font-size: 1.5em;
-    color: #555;
+    color: var(--crl);
 }
 
 
