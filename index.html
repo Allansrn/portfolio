@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +10,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
     <title>My Portfolio</title>
 </head>
 <body>
@@ -59,14 +61,20 @@
                 <div class="indicator"></div>
             </ul>
         </div>               
-        <section id = "Home">
+        <section id="Home">
+            <div class="toggle-switch">
+                <label for="dark-mode-toggle" class="switch-label">
+                    <input type="checkbox" class="checkbox" id="dark-mode-toggle" aria-label="Activer le mode sombre">
+                    <span class="slider"></span>
+                </label>
+            </div>
             <div class="home">
                 <div class="presentation">
                     <p>
-                        Allan Roussillon est <br> un <span id = "mq">développeur web</span> et <br><span id="mq">logiciel junior</span>
+                        Allan Roussillon est <br> 
+                        un développeur <br>
+                        <span class="typing"></span>
                     </p>
-                    <!-- <div class="name">
-                    </div> -->
                 </div>
             </div>
         </section>
@@ -100,12 +108,12 @@
                         </div>
                         <div class="social">
                             <a href="https://www.linkedin.com/in/allan-roussillon-3ab33a2a2/" target="_blank" rel="noopener noreferrer" id="linkedin">
-                                <img src="images/linkedin.svg" alt="linkedin">
-                            </a>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>                            </a>
                             <a href="https://github.com/Allansrn" target="_blank" rel="noopener noreferrer" id="github">
-                                <img src="images/github-mark.svg" alt="github">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>                            </a>
+                            <a href="images/CV_AllanROUSSILLON.pdf" download="CV_AllanROUSSILLON.pdf" id="cv">
+                                <img src="images/cv.svg" alt="cv">
                             </a>
-
                         </div>
                     </div>
                 </div>
@@ -156,7 +164,7 @@
                                 <div style="display: flex; gap: 10px; margin-bottom: -20px;">
                                     <img src="images/html.svg" alt="HTML" class="tech-icon">
                                     <img src="images/css.svg" alt="CSS" class="tech-icon">
-                                    <img src="images/javascript.png" alt="javascript" class="tech-icon" style="height: 40px; width: auto; position: relative; bottom: 15%;">
+                                    <img src="images/javascript.svg" alt="javascript" class="tech-icon">
                                 </div>
                             </div>
                         </div>
@@ -165,24 +173,47 @@
                         <img src="images/AichiApp.png" alt="Image 4" id="miniature">
                         <div class="card-content">
                             <h2 class="card-title">AichiApp</h2>
-                            <p class="card-description">Description de la carte 4. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            <button class="card-button">En savoir plus</button>
+                            <p class="card-description">AichiApp est une application de gestion, développer en swing java connecté à une base de données MySQL.</p>
+                            <div class="card-technologies" style="justify-content: space-between;">
+                                <button class="card-button"><a href="https://github.com/Allansrn/AichiApp" target="_blank" rel="noopener noreferrer">En savoir plus</a></button>
+                                <div style="display: flex; gap: 10px; margin-bottom: -20px;">
+                                    <img src="images/java.svg" alt="HTML" class="tech-icon">
+                                    <img src="images/mysql.svg" alt="CSS" class="tech-icon">
+                                    <!-- <img src="images/javascript.svg" alt="javascript" class="tech-icon" style="height: 40px; width: auto; position: relative; bottom: 15%;"> -->
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="card">
                         <img src="images/Bibliotheque de jeux.png" alt="Image 5" id="miniature">
                         <div class="card-content">
                             <h2 class="card-title">Bibliotheque de jeux</h2>
-                            <p class="card-description">Description de la carte 5. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            <button class="card-button">En savoir plus</button>
+                            <p class="card-description">Application WinForm en csharp permettant de gérer l'inventaire de jeux de société</p>
+                            <div class="card-technologies" style="justify-content: space-between;">
+                                <button class="card-button"><a href="https://github.com/Allansrn/bibliotheque-de-jeux" target="_blank" rel="noopener noreferrer">En savoir plus</a></button>
+                                <div style="display: flex; gap: 10px; margin-bottom: -20px;">
+                                    <img src="images/logoCsharp.svg" alt="HTML" class="tech-icon">
+                                    <img src="images/mysql.svg" alt="CSS" class="tech-icon">
+                                    <!-- <img src="images/javascript.svg" alt="javascript" class="tech-icon" style="height: 40px; width: auto; position: relative; bottom: 15%;"> -->
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="card">
-                        <img src="images/black.jpg" alt="Image 6"  id="miniature">
+                        <img src="images/Interactive.png" alt="Image 6"  id="miniature">
                         <div class="card-content">
-                            <h2 class="card-title">Titre 6</h2>
-                            <p class="card-description">Description de la carte 6. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            <button class="card-button">En savoir plus</button>
+                            <h2 class="card-title">Carte Interactive</h2>
+                            <p class="card-description">Carte Interactive qui regroupe tout les lycées de la guadeloupe avec une fiche informative de chaque lycées</p>
+                            <div class="card-technologies" style="justify-content: space-between;">
+                                <button class="card-button"><a href="https://github.com/kazuto971/Gentle-dev/tree/main/Gentle_dev" target="_blank" rel="noopener noreferrer">En savoir plus</a></button>
+                                <div style="display: flex; gap: 10px; margin-bottom: -20px;">
+                                    <img src="images/html.svg" alt="HTML" class="tech-icon">
+                                    <img src="images/css.svg" alt="CSS" class="tech-icon">
+                                    <img src="images/php.svg" alt="php" class="tech-icon" style="height: 40px; width: auto; position: relative; bottom: 15%;">
+                                    <!-- <img src="images/mysql.svg" alt="CSS" class="tech-icon"> -->
+                                    <img src="images/javascript.svg" alt="javascript" class="tech-icon" style="height: 40px; width: auto; position: relative; bottom: 15%;">
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -238,6 +269,8 @@
                             <li>Boostez votre productivité avec ChatGPT - Openclassroom</li>
                             <li>Python - Netcade</li>
                             <li>Javascript - Openclassroom</li>
+                            <li>Figma - Openclassroom</li>
+                            <li>ApiREst - Openclassroom</li>
                         </ul>
                         <div class="icon-certification">
                             <img src="images/certificat.png" alt="">   
@@ -281,16 +314,6 @@
             </div>            
         </section>
         <script src="script.js"></script>
-        <script>
-            // const list = document.querySelectorAll('.list');
-            // function activeLink(){
-            //     list.forEach((item) =>
-            //     item.classList.remove('active'));
-            //     this.classList.add('active');  
-            // }
-            // list.forEach((item) =>
-            // item.addEventListener('click', activeLink))
-        </script>
         <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     </main>
