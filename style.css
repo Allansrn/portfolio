@@ -345,6 +345,10 @@ section{
 
 }
 
+.contact{
+    /* background-color: yellow; */
+}
+
 .social{
     display: flex;
     justify-content: center;
@@ -354,12 +358,6 @@ section{
     margin: 20px;
     margin-top: -115px;
     margin-left: -380px;
-    /* animation-name: floating;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out; */
-    /* margin-left: 30px;
-    margin-top: 5px; */
 }
 
 
@@ -412,25 +410,31 @@ section{
     to   { transform: translate(0, -0px); }    
 }
 
-.mailto{
-   position: relative;
-   left: 65%;
-   padding: 20px;
-   margin: 20px;
-   background-color: var(--accent);
-   border-radius: 15px 0px 0px 15px;
-   width: 100%;
-   transition: transform 0.3s ease-in-out;
+.cta{
+    width: 230px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 60%;
+    padding: 15px;
+    margin: 20px;
+    background-color: var(--accent);
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    /* transition: transform 0.3s ease-in-out; */
 }
 
-.mailto a{
+.cta a{
     color: var(--bg-color);
     text-decoration: none;
 }
 
-.mailto:hover{
-    transform: scale(1.05);
+.cta:hover{
+    /* transform: scale(1.05); */
     cursor: pointer;
+    border-color: #E0E0E0;
+    box-shadow: 0 0 10px #E0E0E0, 0 0 20px #E0E0E0, 0 0 30px #E0E0E0;
 }
 
 
@@ -654,10 +658,15 @@ section{
     padding: 20px;
     margin-top: 40px;
 }
+.list-certification a{
+    text-decoration: none;
+    color: var(--crl);
+}
 .icon-certification{
     display: flex;
     flex-direction: row;
 }
+
 
 
 #veille-tech{
