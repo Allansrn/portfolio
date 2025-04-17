@@ -165,6 +165,11 @@ body {
 
 }
 
+/* .navigation ul li:nth-child(6).active ~ .indicator{
+    transform: translateX(calc(70px * 5));
+
+} */
+
 section{
     /*border: 2px #395BC7 solid;*/
     margin: 0;
@@ -290,8 +295,8 @@ section{
 
 
 #About{
-    width: 100vw;
-    height: 100vh;
+    /* width: 100vw;
+    height: 100vh; */
     background-color: var(--bg-color);
 
 }
@@ -435,6 +440,102 @@ section{
     cursor: pointer;
     border-color: #E0E0E0;
     box-shadow: 0 0 10px #E0E0E0, 0 0 20px #E0E0E0, 0 0 30px #E0E0E0;
+}
+
+/* #parcours{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--bg-color);
+}
+
+#parcours h1{
+    display:flex;
+    justify-content: flex-start;
+    padding: 10px 50px 25px 50px;
+    font-family: monospace;
+    font-style: oblique;
+    font-size: 3rem;
+    width: auto;
+} */
+
+.container-timeline {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    padding: 30px;
+}
+
+.container-timeline .education,
+.container-timeline .experience {
+    height: 575px;
+    width: 600px;
+    background-color: var(--bg-color);
+    border: #18191A 2px solid;
+    border-radius: 25px;
+    margin: 10px;
+}
+
+.container-timeline .education h2,
+.container-timeline .experience h2 {
+    font-family: monospace;
+    font-size: 3.5em;
+    padding: 20px;
+    color: var(--crl);
+}
+
+.timeline-item {
+    padding: 3em 2em 2em;
+    position: relative;
+    color: rgba(0, 0, 0, 0.7);
+    border-left: 2px solid #18191A; /* Remplacez $border-color par la couleur souhaitée */
+    margin: 10px;
+    
+}
+
+.timeline-item h3 {
+    font-family: monospace;
+    font-size: 1.5em;
+    margin-bottom: 0.25em;
+    color: var(--crl);
+}
+
+.timeline-item p {
+    font-size: 1rem;
+    font-family: monospace;
+}
+
+.timeline-item::before {
+    content: attr(date-is);
+    position: absolute;
+    left: 2em;
+    font-weight: bold;
+    top: 1em;
+    display: block;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 0.785rem;
+}
+
+.timeline-item::after {
+    width: 10px;
+    height: 10px;
+    display: block;
+    top: 1em;
+    position: absolute;
+    left: -7px;
+    border-radius: 10px;
+    content: '';
+    border: 2px solid #18191A; /* Remplacez $border-color par la couleur souhaitée */
+    background: white;
+}
+
+.timeline-item:last-child {
+    border-image: linear-gradient(
+        to bottom,
+        #18191A 60%, /* Remplacez $border-color par la couleur souhaitée */
+        rgba(24, 25, 26, 0) /* Remplacez $border-color par la couleur souhaitée */
+    ) 1 100%;
 }
 
 
