@@ -468,8 +468,8 @@ section{
 
 .container-timeline .education,
 .container-timeline .experience {
-    height: 575px;
-    width: 600px;
+    height: 650px;
+    width: 650px;
     background-color: var(--bg-color);
     border: #18191A 2px solid;
     border-radius: 25px;
@@ -489,7 +489,7 @@ section{
     position: relative;
     color: rgba(0, 0, 0, 0.7);
     border-left: 2px solid #18191A; /* Remplacez $border-color par la couleur souhaitée */
-    margin: 10px;
+    margin: 0px 10px 0px 10px;
     
 }
 
@@ -501,6 +501,16 @@ section{
 }
 
 .timeline-item p {
+    font-size: 1rem;
+    font-family: monospace;
+}
+
+.timeline-item ul{
+    /* list-style: none; */
+    margin-left: 1em;
+}
+
+.timeline-item ul li {
     font-size: 1rem;
     font-family: monospace;
 }
