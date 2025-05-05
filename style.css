@@ -416,6 +416,21 @@ section{
     to   { transform: translate(0, -0px); }    
 }
 
+.social #tableau-synthese svg{
+    height: auto;
+    width: 70px;
+    animation-name: floating-tableau-synthese;
+    animation-delay: 3s;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+@keyframes floating-tableau-synthese {
+    from { transform: translate(0,  0px); }
+    65%  { transform: translate(0, 10px); }
+    to   { transform: translate(0, -0px); }    
+}
+
 .cta{
     width: 230px;
     display: flex;
@@ -853,3 +868,308 @@ section{
 }
 
 
+@media only screen and (min-device-width : 320px) and (max-device-width : 600px) { /*Max 600px*/
+    /* Styles */
+    /*NAVIGATION*/
+    .navigation {
+        width: 100%;
+        height: 70px;
+        /* bottom: 0;
+        left: 0;
+        transform: translateX(0); */
+    }
+    /* .navigation ul {
+        width: 100%;
+        justify-content: space-around;
+    }
+    .navigation ul li {
+        width: 100%;
+        height: 70px;
+    }
+    .navigation ul li a {
+        width: 100%;
+        height: 70px;
+    }
+    .navigation ul li a .icon {
+        font-size: 1.5em;
+    }
+    .navigation ul li a .text {
+        font-size: 0.75em;
+    } */
+    .indicator {
+        display: none;
+    }
+    /*HOME*/
+    #Home {
+        height: auto;
+        padding: 20px;
+    }
+    .home {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+    }
+    .presentation {
+        font-size: 2.75em;
+        text-align: center;
+    }   
+    #About {
+        /* height: auto; */
+    }
+    #About h1 {
+        font-size: 3.5em;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+    .about-img img{
+        display: none;
+    }
+    .text-about{
+        width: 100%;
+        font-size: 1.5em;
+    }
+    .contact{
+        width: 100%;
+    }
+    .cta{
+        font-size: 0.75rem;
+        width: 8rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        left: 60%;
+        padding: 15px;
+        margin: 20px;
+        background-color: var(--accent);
+        border-radius: 25px;
+        transition: all 0.3s ease;
+        /* transition: transform 0.3s ease-in-out; */
+    }
+    .cta a{
+        color: var(--bg-color);
+        text-decoration: none;
+    }
+    .cta:hover{
+        /* transform: scale(1.05); */
+        cursor: pointer;
+        border-color: #E0E0E0;
+        box-shadow: 0 0 10px #E0E0E0, 0 0 20px #E0E0E0, 0 0 30px #E0E0E0;
+    }
+    .social{}
+    .social #linkedin svg , #github svg, #cv img, #tableau-synthese svg{
+        height: auto;
+        width: 0.25rem;
+    }
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 600px) {
+    /* Navigation */
+    .navigation {
+        width: 95%;
+        height: 60px;
+        bottom: 10px;
+    }
+
+    .navigation ul {
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    .navigation ul li {
+        width: 55px;
+        height: 60px;
+    }
+
+    .navigation ion-icon {
+        font-size: 1.2em;
+    }
+
+    /* Home Section */
+    .presentation {
+        font-size: 2em;
+    }
+
+    .typing {
+        font-size: 0.8em;
+    }
+
+    /* About Section */
+    #About h1 {
+        font-size: 2em;
+        padding: 20px;
+    }
+
+    .about-core {
+        margin-top: 0;
+        padding: 10px;
+    }
+
+    .text-about {
+        width: 100%;
+        font-size: 1.2em;
+        padding: 10px;
+    }
+
+    /* Social Media */
+    .social {
+        margin: 20px auto;
+        gap: 15px;
+        margin-left: 0;
+        margin-top: 20px;
+        justify-content: center;
+    }
+
+    .social #linkedin svg,
+    .social #github svg,
+    .social #cv img,
+    .social #tableau-synthese svg {
+        width: 40px;
+        height: auto;
+    }
+
+    /* Timeline Section */
+    .container-timeline {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .container-timeline .education,
+    .container-timeline .experience {
+        width: 100%;
+        height: auto;
+        margin: 10px 0;
+    }
+
+    .container-timeline .education h2,
+    .container-timeline .experience h2 {
+        font-size: 2em;
+        padding: 15px;
+        text-align: center;
+    }
+
+    .timeline-item {
+        padding: 2em 1em 1em;
+        margin: 0px 5px;
+    }
+
+    .timeline-item h3 {
+        font-size: 1.2em;
+    }
+
+    .timeline-item p,
+    .timeline-item ul li {
+        font-size: 0.9rem;
+    }
+
+    .timeline-item::before {
+        left: 1em;
+        font-size: 0.7rem;
+    }
+
+    .timeline-item::after {
+        width: 8px;
+        height: 8px;
+        left: -5px;
+    }
+
+    .timeline-item:last-child {
+        border-image: linear-gradient(
+            to bottom,
+            var(--crl) 60%,
+            rgba(24, 25, 26, 0)
+        ) 1 100%;
+    }
+
+    /* Projects Section */
+    .grid-container {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+
+    .card {
+        margin-bottom: 20px;
+    }
+
+    .card-title {
+        font-size: 1.2em;
+    }
+
+    .card-description {
+        font-size: 0.9em;
+    }
+
+    /* Skills Section */
+    #Skills {
+        height: auto;
+        padding-bottom: 60px;
+    }
+
+    .competence {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .grid-icon {
+        width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card-icon img {
+        width: 80px;
+        height: 80px;
+        padding: 10px;
+    }
+
+    .certification {
+        width: 100%;
+    }
+
+    .certification h2 {
+        font-size: 2em;
+        padding: 10px;
+    }
+
+    .list-certification {
+        font-size: 1.2em;
+    }
+
+    /* Veille Tech Section */
+    #veille-tech {
+        height: auto;
+        margin-top: 30px;
+    }
+
+    .veille-container {
+        padding: 10px;
+    }
+
+    .veille-card {
+        flex-direction: column;
+        width: 95%;
+    }
+
+    .veille-img img {
+        height: 150px;
+        width: 150px;
+    }
+
+    .veille-content h2 {
+        font-size: 1.5em;
+    }
+
+    .veille-content p {
+        font-size: 1em;
+    }
+
+    /* CTA Button */
+    .cta {
+        width: 150px;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 20px auto;
+        padding: 10px;
+    }
+}
