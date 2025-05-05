@@ -868,138 +868,86 @@ section{
 }
 
 
-@media only screen and (min-device-width : 320px) and (max-device-width : 600px) { /*Max 600px*/
+@media only screen and (min-device-width : 320px) and (max-device-width : 600px) {
     /* Styles */
-    /*NAVIGATION*/
-    .navigation {
-        width: 100%;
-        height: 70px;
-        /* bottom: 0;
-        left: 0;
-        transform: translateX(0); */
+    body {
+        overflow-x: hidden;
     }
-    /* .navigation ul {
+
+    /* NAVIGATION - version améliorée du 2ᵉ media query */
+    .navigation {
+        width: 95%;
+        height: 60px;
+        bottom: 10px;
+        border-radius: 15px;
+    }
+
+    .navigation ul {
         width: 100%;
         justify-content: space-around;
+        padding: 0 10px;
     }
+
     .navigation ul li {
-        width: 100%;
-        height: 70px;
+        width: 45px;
+        height: 60px;
     }
-    .navigation ul li a {
-        width: 100%;
-        height: 70px;
-    }
+
     .navigation ul li a .icon {
-        font-size: 1.5em;
+        line-height: 60px;
+        font-size: 1.2em;
     }
+
+    .navigation ul li.active a .icon {
+        transform: translateY(0px);
+    }
+
+    .navigation ul li.active a ion-icon {
+        opacity: 0;
+    }
+
     .navigation ul li a .text {
-        font-size: 0.75em;
-    } */
+        font-size: 0.65em;
+    }
+
+    .navigation ul li.active a .text {
+        transform: translateY(0px);
+    }
+
     .indicator {
         display: none;
     }
-    /*HOME*/
+
+    /* HOME */
     #Home {
         height: auto;
         padding: 20px;
     }
+
     .home {
         flex-direction: column;
         align-items: center;
         justify-content: center;
         height: auto;
     }
+
     .presentation {
-        font-size: 2.75em;
+        font-size: 3.25em;
         text-align: center;
-    }   
-    #About {
-        /* height: auto; */
-    }
-    #About h1 {
-        font-size: 3.5em;
-        display: flex;
-        justify-content: center;
-        text-align: center;
-    }
-    .about-img img{
-        display: none;
-    }
-    .text-about{
-        width: 100%;
-        font-size: 1.5em;
-    }
-    .contact{
-        width: 100%;
-    }
-    .cta{
-        font-size: 0.75rem;
-        width: 8rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-        left: 60%;
-        padding: 15px;
-        margin: 20px;
-        background-color: var(--accent);
-        border-radius: 25px;
-        transition: all 0.3s ease;
-        /* transition: transform 0.3s ease-in-out; */
-    }
-    .cta a{
-        color: var(--bg-color);
-        text-decoration: none;
-    }
-    .cta:hover{
-        /* transform: scale(1.05); */
-        cursor: pointer;
-        border-color: #E0E0E0;
-        box-shadow: 0 0 10px #E0E0E0, 0 0 20px #E0E0E0, 0 0 30px #E0E0E0;
-    }
-    .social{}
-    .social #linkedin svg , #github svg, #cv img, #tableau-synthese svg{
-        height: auto;
-        width: 0.25rem;
-    }
-}
-
-@media only screen and (min-device-width : 320px) and (max-device-width : 600px) {
-    /* Navigation */
-    .navigation {
-        width: 95%;
-        height: 60px;
-        bottom: 10px;
-    }
-
-    .navigation ul {
-        width: 100%;
-        justify-content: space-around;
-    }
-
-    .navigation ul li {
-        width: 55px;
-        height: 60px;
-    }
-
-    .navigation ion-icon {
-        font-size: 1.2em;
-    }
-
-    /* Home Section */
-    .presentation {
-        font-size: 2em;
     }
 
     .typing {
         font-size: 0.8em;
     }
 
-    /* About Section */
     #About h1 {
-        font-size: 2em;
         padding: 20px;
+        display: flex;
+        justify-content: center;
+        font-size: 4em;}
+
+    .about-img img {
+        display: none;
     }
 
     .about-core {
@@ -1013,12 +961,40 @@ section{
         padding: 10px;
     }
 
-    /* Social Media */
+    .contact {
+        width: 100%;
+    }
+
+    .cta {
+        font-size: 0.75rem;
+        width: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 10px;
+        margin: 20px auto;
+        background-color: var(--accent);
+        border-radius: 25px;
+        transition: all 0.3s ease;
+    }
+
+    .cta a {
+        color: var(--bg-color);
+        text-decoration: none;
+    }
+
+    .cta:hover {
+        cursor: pointer;
+        border-color: #E0E0E0;
+        box-shadow: 0 0 10px #E0E0E0, 0 0 20px #E0E0E0, 0 0 30px #E0E0E0;
+    }
+
     .social {
         margin: 20px auto;
         gap: 15px;
-        margin-left: 0;
-        margin-top: 20px;
         justify-content: center;
     }
 
@@ -1030,7 +1006,8 @@ section{
         height: auto;
     }
 
-    /* Timeline Section */
+    /* Ajouts supplémentaires du 2e media query pour cohérence */
+
     .container-timeline {
         flex-direction: column;
         padding: 15px;
@@ -1083,7 +1060,10 @@ section{
         ) 1 100%;
     }
 
-    /* Projects Section */
+    #project h1{
+        display: flex;
+        justify-content: center;
+    }
     .grid-container {
         grid-template-columns: 1fr;
         padding: 10px;
@@ -1101,10 +1081,15 @@ section{
         font-size: 0.9em;
     }
 
-    /* Skills Section */
     #Skills {
         height: auto;
         padding-bottom: 60px;
+    }
+
+    #Skills h1 {
+        display: flex;
+        justify-content: center;
+        padding: 20px;
     }
 
     .competence {
@@ -1136,10 +1121,15 @@ section{
         font-size: 1.2em;
     }
 
-    /* Veille Tech Section */
     #veille-tech {
         height: auto;
         margin-top: 30px;
+    }
+
+    #veille-tech h1 {
+        display: flex;
+        justify-content: center;
+        padding: 20px;
     }
 
     .veille-container {
@@ -1162,14 +1152,5 @@ section{
 
     .veille-content p {
         font-size: 1em;
-    }
-
-    /* CTA Button */
-    .cta {
-        width: 150px;
-        left: 50%;
-        transform: translateX(-50%);
-        margin: 20px auto;
-        padding: 10px;
     }
 }
